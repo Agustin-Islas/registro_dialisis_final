@@ -1,12 +1,12 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const registroRoutes = require('./routes/registros');
+import express from 'express';
+import cors from 'cors';
+import { json } from 'body-parser';
+import registroRoutes from './routes/registros';
 
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json());
 app.use('/', registroRoutes);
 
-module.exports = app;
+export default app;

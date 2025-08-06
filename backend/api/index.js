@@ -1,14 +1,14 @@
-const serverless = require('serverless-http');
-const express = require('express');
-const cors = require('cors');
+import serverless from 'serverless-http';
+import express, { json } from 'express';
+import cors from 'cors';
 
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+app.use(json());
 
 app.get('/registros', (req, res) => {
   res.json({ mensaje: '¡Express y rutas funcionando en Vercel!' });
 });
 
-module.exports = serverless(app);
+export default serverless(app);
