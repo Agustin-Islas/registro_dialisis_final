@@ -1,14 +1,12 @@
 const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+const registroRoutes = require('./routes/registros'); // Ajusta la ruta según tu estructura
 
 const app = express();
-
 app.use(cors());
-app.use(express.json());
-
-app.get('/registros', (req, res) => {
-  res.json({ mensaje: '¡Express y rutas funcionando en Vercel!' });
-});
+app.use(bodyParser.json());
+app.use('/', registroRoutes); // ¡NO uses '/api'!
 
 module.exports = serverless(app);

@@ -1,5 +1,7 @@
 // db.js
 const { createClient } = require('@libsql/client');
+require('dotenv').config();
+
 
 const db = createClient({
   url: process.env.TURSO_URL,

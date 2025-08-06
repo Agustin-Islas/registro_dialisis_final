@@ -1,5 +1,5 @@
 /* global M */
-const API = '/api';
+const API = '/api'; // Cambiar a la URL de tu API si es necesario
 let cache = [];
 
 /* ---------- util ---------- */
