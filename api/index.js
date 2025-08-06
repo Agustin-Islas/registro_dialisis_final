@@ -1,4 +1,4 @@
 const serverless = require('serverless-http');
-const app = require('../backend/server'); // asegurarte que server.js exporte app, no haga listen
+const app = require('../backend/server');
 
 module.exports = serverless(app);
