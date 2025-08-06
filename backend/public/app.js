@@ -198,4 +198,3 @@ function llenarModal(r){
   M.FormSelect.getInstance($('#edit-concentracion'))?.destroy();
   M.FormSelect.init($('#edit-concentracion'));
 }
-
