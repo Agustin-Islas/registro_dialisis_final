@@ -14,4 +14,5 @@ router.put('/registro/:id', actualizarRegistro);
 router.delete('/registro/:id', borrarRegistro);
 router.get('/pdf', generarPDF);
 
+router.get('/ping', (req, res) => res.json({ ok: true }));
 module.exports = router;
