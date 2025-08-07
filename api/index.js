@@ -7,6 +7,7 @@ const registroRoutes = require('./routes/registros'); // Ajusta la ruta según t
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/', registroRoutes); // ¡NO uses '/api'!
+//app.use('/', registroRoutes); // ¡NO uses '/api'!
+router.get('/ping', (req, res) => res.json({ ok: true }));
 
 module.exports = serverless(app);
