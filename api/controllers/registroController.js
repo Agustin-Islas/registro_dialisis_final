@@ -1,5 +1,5 @@
 const db = require('../db/db');
-const generarPDF = require('../utils/generarPDF');
+const generarPDF = require('../Utils/generarPDF');
 
 /* --- LISTAR --- */
 exports.getRegistros = async (req, res) => {
